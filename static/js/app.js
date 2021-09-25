@@ -33,6 +33,8 @@ function guess() {
 
   if (user_guess < 1 || user_guess > 100) {
     alert('Please Enter between 1-100');
+  } else if (guessed_num_list.includes(user_guess)) {
+    alert('You have already tried this number');
   } else {
     guessed_num_list.push(user_guess);
     num_of_guesses += 1;
